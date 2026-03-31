@@ -17,6 +17,7 @@
                 <li class="menu-item" data-tab="deals"><i class="fas fa-tag"></i> Акции (#акции)</li>
                 <li class="menu-item" data-tab="cayo"><i class="fas fa-map-marker-alt"></i> Кайо-Перико (#кайо)</li>
                 <li class="menu-item" data-tab="cars"><i class="fas fa-car"></i> Транспорт (#авто)</li>
+                <li class="menu-item" data-tab="site-updates"><i class="fas fa-code-branch"></i> Обновления сайта</li>
                 <li class="menu-item" data-tab="friends"><i class="fas fa-users"></i> Найти друзей</li>
             </ul>
         </nav>
@@ -42,6 +43,7 @@
         <section id="deals" class="tab-content"><div class="news-grid" id="container-deals"></div></section>
         <section id="cayo" class="tab-content"><div class="news-grid" id="container-cayo"></div></section>
         <section id="cars" class="tab-content"><div class="news-grid" id="container-cars"></div></section>
+        <section id="site-updates" class="tab-content"><div class="news-grid" id="container-siteU"></div></section>
 
         <section id="friends" class="tab-content">
             <div class="friends-container">
@@ -59,6 +61,9 @@
                         <button id="logout-btn">Выйти</button>
                     </div>
                     <div id="chat-messages" class="chat-messages"></div>
+                    
+                    <div id="typing-status" style="height: 20px; font-size: 12px; color: var(--accent); margin-bottom: 5px; opacity: 0; transition: 0.3s;"></div>
+                    
                     <div class="chat-input">
                         <input type="text" id="chat-input-field" placeholder="Введите сообщение...">
                         <button id="send-msg"><i class="fas fa-paper-plane"></i></button>
@@ -74,10 +79,6 @@
             <div class="setting-item">
                 <label>Цвет акцента:</label>
                 <input type="color" id="accent-color" value="#f99f1e">
-            </div>
-            <div class="setting-item">
-                <label>Цвет панелей:</label>
-                <input type="color" id="bg-color" value="#000000">
             </div>
             <button id="close-settings">Закрыть</button>
         </div>
