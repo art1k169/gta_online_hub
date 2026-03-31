@@ -52,7 +52,10 @@
                 </div>
                 <div id="chat-block" class="chat-card hidden">
                     <div class="chat-header">
-                        <span id="display-name"></span>
+                        <div>
+                            <span id="display-name"></span>
+                            <div id="online-count" style="color: #5cb85c; font-size: 12px; font-weight: bold; margin-top: 4px;">Онлайн: 0</div>
+                        </div>
                         <button id="logout-btn">Выйти</button>
                     </div>
                     <div id="chat-messages" class="chat-messages"></div>
@@ -80,6 +83,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
 </body>
 </html>
