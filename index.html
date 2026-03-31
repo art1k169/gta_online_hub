@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA HUB | LIVE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo"><h2>GTA HUB</h2></div>
+        <nav>
+            <ul>
+                <li class="menu-item active" data-tab="news"><i class="fas fa-newspaper"></i> Новости</li>
+                <li class="menu-item" data-tab="bonuses"><i class="fas fa-gift"></i> Бонусы (#бонусы)</li>
+                <li class="menu-item" data-tab="deals"><i class="fas fa-tag"></i> Акции (#акции)</li>
+                <li class="menu-item" data-tab="cayo"><i class="fas fa-map-marker-alt"></i> Кайо-Перико (#кайо)</li>
+                <li class="menu-item" data-tab="cars"><i class="fas fa-car"></i> Транспорт (#авто)</li>
+                <li class="menu-item" data-tab="friends"><i class="fas fa-users"></i> Найти друзей</li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <button id="settings-btn"><i class="fas fa-cog"></i> Настройки</button>
+        </div>
+    </aside>
+
+    <main class="content">
+        <header>
+            <h1 id="main-title">Новости</h1>
+            <div class="status-bar">
+                <div class="sync-info">
+                    <span id="date-display"></span>
+                    <span id="loader" class="loader-hidden">● Обновление...</span>
+                </div>
+                <button id="refresh-btn"><i class="fas fa-sync-alt"></i></button>
+            </div>
+        </header>
+
+        <section id="news" class="tab-content active"><div class="news-grid" id="container-news"></div></section>
+        <section id="bonuses" class="tab-content"><div class="news-grid" id="container-bonuses"></div></section>
+        <section id="deals" class="tab-content"><div class="news-grid" id="container-deals"></div></section>
+        <section id="cayo" class="tab-content"><div class="news-grid" id="container-cayo"></div></section>
+        <section id="cars" class="tab-content"><div class="news-grid" id="container-cars"></div></section>
+
+        <section id="friends" class="tab-content">
+            <div class="friends-container">
+                <div id="auth-block" class="auth-card">
+                    <h3>Регистрация в HUB</h3>
+                    <input type="text" id="user-nickname" placeholder="Ваш ник в Social Club">
+                    <button id="save-auth">Сохранить</button>
+                </div>
+                <div id="chat-block" class="chat-card hidden">
+                    <div class="chat-header">
+                        <span id="display-name"></span>
+                        <button id="logout-btn">Выйти</button>
+                    </div>
+                    <div id="chat-messages" class="chat-messages"></div>
+                    <div class="chat-input">
+                        <input type="text" id="chat-input-field" placeholder="Введите сообщение...">
+                        <button id="send-msg"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <h3>Настройки</h3>
+            <div class="setting-item">
+                <label>Цвет акцента:</label>
+                <input type="color" id="accent-color" value="#f99f1e">
+            </div>
+            <div class="setting-item">
+                <label>Цвет панелей:</label>
+                <input type="color" id="bg-color" value="#000000">
+            </div>
+            <button id="close-settings">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
